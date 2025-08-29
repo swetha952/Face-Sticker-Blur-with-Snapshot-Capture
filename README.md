@@ -2,72 +2,72 @@
 This project detects faces in real-time using OpenCV, applies a smooth blurred sticker effect with a cute background on each detected face, displays the face count, and allows snapshot saving with 's'. It offers a visually appealing, privacy-friendly video experience from webcam input.
 Face Sticker Blur with Snapshot Capture
 Overview
-This project is a real-time face detection and processing application using OpenCV in Python. It captures video feed from the webcam, detects faces in each frame, and applies a visually appealing blurred "sticker" effect on detected faces. Additionally, it displays a count of faces detected and offers a feature to save snapshots of the current frame with stickers applied.
+This project is a real-time face detection and processing application built with Python and OpenCV. It captures video from the webcam, detects faces in each frame, and applies a visually appealing blurred "sticker" effect on the detected faces. Additionally, it displays the number of faces detected and provides a feature to save snapshots of the current frame with stickers applied.
 
 Features
-Real-time face detection: Utilizes OpenCV’s Haar Cascade classifier to detect frontal faces dynamically from webcam feed.
+Real-time Face Detection: Uses OpenCV’s Haar Cascade classifier for dynamic frontal face detection from the webcam feed.
 
-Blurred sticker effect: Extracts each detected face region, resizes it to a smaller sticker size, and applies a smooth Gaussian blur for aesthetic enhancement.
+Blurred Sticker Effect: Extracts each detected face, resizes it to a smaller size, and applies a smooth Gaussian blur to create an aesthetic enhancement.
 
-Sticker overlay with background: Places blurred face stickers onto the video frame with a semi-transparent white rounded rectangle background, creating a cute and polished look.
+Sticker Overlay with Background: Blurred face stickers are placed on the video frames with a semi-transparent white rounded rectangle background, delivering a polished and cute visual style.
 
-Face count display: Shows the number of faces detected on the top-left of the video frame, updating in real time.
+Face Count Display: Shows the live count of detected faces on the top-left corner of the frame.
 
-Snapshot saving: Press ‘s’ to capture and save the current frame with stickers as an image file for quick sharing or record-keeping.
+Snapshot Saving: Press s to capture and save the current frame with stickers applied for sharing or record-keeping.
 
-Graceful exit: Press the down arrow key (key code 40) to exit the video stream and close all windows cleanly.
+Graceful Exit: Press the Down Arrow key (↓) to exit the video stream and cleanly close all windows.
 
 How It Works
-The script loads the Haar Cascade XML classifier for frontal face recognition.
+Loads the Haar Cascade XML classifier for frontal face recognition.
 
-It captures webcam video feed frame-by-frame.
+Captures video frames from the webcam continuously.
 
-In each frame:
+For each frame:
 
-Converts the frame to grayscale for face detection.
+Converts to grayscale for efficient face detection.
 
 Detects faces using detectMultiScale.
 
-For each face, extracts the face region, resizes it, applies Gaussian blur, and overlays it as a sticker on the frame.
+Extracts, resizes, and applies Gaussian blur to each face region to create a sticker.
 
-Adds a rounded rectangle background for each sticker for a cute and smooth appearance.
+Adds a cute rounded rectangle background behind each sticker for smoothness.
 
-Displays the total face count.
+Displays the total live face count on the frame.
 
-Outputs the processed frame live in a window.
+Outputs the processed frame in a display window.
 
 Listens for keyboard inputs:
 
-Save snapshot on pressing ‘s’.
+s to save a snapshot.
 
-Exit on pressing the down arrow key.
+Down Arrow (↓) to exit the program.
 
 Installation & Usage
-Install required package:
+Install dependencies:
 
 bash
 pip install opencv-python numpy
-Download haarcascade_frontalface_default.xml from the OpenCV GitHub or official repository.
+Download the haarcascade_frontalface_default.xml file from the official OpenCV repository.
 
 Place the XML file in the same directory as the script.
 
-Run the script:
+Run the script with:
 
 bash
 python face_sticker_blur.py
-Make sure a webcam is connected and accessible.
+Ensure a webcam is connected and accessible.
 
 Customization Tips
-Adjust sticker size or blur intensity by modifying sticker_width and Gaussian blur parameters.
+Modify sticker_width and Gaussian blur parameters to change sticker size and blur intensity.
 
-Change the background color or transparency by editing the rectangle drawing and alpha blending sections.
+Customize the sticker background color or transparency by adjusting the rectangle and alpha blending code.
 
-Integrate different types of stickers or effects for creative face overlays.
+Add different types of stickers or effects for more creative overlays.
 
 Keyboard Controls
-s : Save the current frame snapshot with stickers.
+s : Save snapshot of the current frame with stickers.
 
-Down arrow (↓) : Exit the application.
+Down Arrow (↓) : Exit the application cleanly.
 
 Dependencies
 OpenCV (cv2)
@@ -75,6 +75,6 @@ OpenCV (cv2)
 NumPy (numpy)
 
 License
-This project is open-source and free to use for educational and personal projects.
+This project is open-source and free to use for educational and personal purposes.
 
-This project offers a fun and visually pleasing way to anonymize faces in webcam video streams with custom blurred stickers while also enabling snapshot capturing seamlessly. Perfect for privacy-aware live streaming or creative video processing experiments.
+This project offers a fun and visually pleasing way to anonymize faces in webcam video streams by applying custom blurred stickers while enabling seamless snapshot capturing. It is perfect for privacy-aware live streaming, creative video processing, or computer vision learning experiments.
